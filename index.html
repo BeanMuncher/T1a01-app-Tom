@@ -1,16 +1,36 @@
-I <b> Like </b> Beans.<br><br>
-<input id="myText" type=text value="Wow" <br><br>
+I  Like <b> Beans </b> .<br><br>
+<input id="myText" type=text value="I really love beans" <br><br>
 
-<input type=button value="Run wow" onclick="{
+<input type=button value="Run Beans" onclick="{
   myOut = document.getElementById('myArea')
-  for (myCount = 1; myCount<= 10; myCount++){
-     myOut.innerHTML += 'Wow '
+  myIn = document.getElementById('myText')
+  // alert(myIn.value)
+
+  for (myCount = 5; myCount >= 1; myCount--){
+
+     myOut.innerHTML += myCount + ' ' + myIn.value
+
      if (myCount == 3){
-        myOut.innerHTML += 'Cool '
+ 
+       myOut.innerHTML += ' beans'
      }
+       myOut.innerHTML += '<br>'
   }
 }"> <br><br>
 
-<div id="myArea" > Old Beans </div> <br>
-<input type=button value="show myOut" onclick="{
-  alert('The variable my Out contains ' + myOut.innerHTML)}">
+<div id="myArea" > Old Beans <br> </div> <br>
+<input type=button value="show my Beans" onclick="{
+  alert('The variable my Out contains ' + myOut.innerHTML)
+}">
+
+<button type="button" onclick="myFunction()">Set background color</button>
+
+<script>
+function myFunction() {
+    document.body.style.backgroundColor = "aqua";
+}
+</script>
+
+</body>
+</html>
+
